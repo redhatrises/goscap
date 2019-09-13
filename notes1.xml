@@ -21,13 +21,8 @@
  </test_actions>
  <questions></questions>
  <artifacts></artifacts>
- <variables>
-  <constant_variable id="" datatype="">
-   <value></value>
-  </constant_variable>
- </variables>
- <results start_time="" end_time="">
-  <title></title>
+ <variables></variables>
+ <results>
   <test_action_results>
    <test_action_result test_action_ref="" result=""></test_action_result>
   </test_action_results>

@@ -5,21 +5,19 @@ import (
 	"io/ioutil"
 )
 
-
 type Generator struct {
-                XMLName xml.Name `xml:"generator"`
-                // Text           string   `xml:",chardata"`
-                ProductName    string `xml:"product_name,omitempty"`
-                ProductVersion string `xml:"product_version,omitempty"`
-                Author         []struct {
-                        Text         string `xml:",chardata"`
-                        Organization string `xml:"organization,attr"`
-                } `xml:"author,omitempty"`
-                SchemaVersion  string `xml:"schema_version"`
-                Timestamp      string `xml:"timestamp"`
-                AdditionalData string `xml:"additional_data,omitempty"`
-        }
-
+	XMLName xml.Name `xml:"generator"`
+	// Text           string   `xml:",chardata"`
+	ProductName    string `xml:"product_name,omitempty"`
+	ProductVersion string `xml:"product_version,omitempty"`
+	Author         []struct {
+		Text         string `xml:",chardata"`
+		Organization string `xml:"organization,attr"`
+	} `xml:"author,omitempty"`
+	SchemaVersion  string `xml:"schema_version"`
+	Timestamp      string `xml:"timestamp"`
+	AdditionalData string `xml:"additional_data,omitempty"`
+}
 
 type Ocil struct {
 	XMLName xml.Name `xml:"ocil"`
@@ -31,18 +29,18 @@ type Ocil struct {
 	Xsi            string `xml:"xsi,attr"`
 
 	Generator struct {
-                XMLName xml.Name `xml:"generator"`
-                // Text           string   `xml:",chardata"`
-                ProductName    string `xml:"product_name,omitempty"`
-                ProductVersion string `xml:"product_version,omitempty"`
-                Author         []struct {
-                        Text         string `xml:",chardata"`
-                        Organization string `xml:"organization,attr"`
-                } `xml:"author,omitempty"`
-                SchemaVersion  string `xml:"schema_version"`
-                Timestamp      string `xml:"timestamp"`
-                AdditionalData string `xml:"additional_data,omitempty"`
-        }
+		XMLName xml.Name `xml:"generator"`
+		// Text           string   `xml:",chardata"`
+		ProductName    string `xml:"product_name,omitempty"`
+		ProductVersion string `xml:"product_version,omitempty"`
+		Author         []struct {
+			Text         string `xml:",chardata"`
+			Organization string `xml:"organization,attr"`
+		} `xml:"author,omitempty"`
+		SchemaVersion  string `xml:"schema_version"`
+		Timestamp      string `xml:"timestamp"`
+		AdditionalData string `xml:"additional_data,omitempty"`
+	}
 	Document struct {
 		Text        string   `xml:",chardata"`
 		Title       string   `xml:"title"`
@@ -96,35 +94,47 @@ type Ocil struct {
 		} `xml:"choice_question"`
 	} `xml:"questions"`
 	Artifacts struct {
-		Text     string `xml:",chardata"`
+		//Text     string `xml:",chardata"`
 		Artifact []struct {
 			Text        string `xml:",chardata"`
 			ID          string `xml:"id,attr"`
 			Title       string `xml:"title"`
 			Description string `xml:"description"`
+			Persistent  string `xml:"persistent,omitempty"`
 		} `xml:"artifact,omitempty"`
 	} `xml:"artifacts"`
 	Variables struct {
-		Text     string `xml:",chardata"`
-		Variable []struct {
-			Text     string `xml:",chardata"`
-			Type     string `xml:"type,attr"`
-			ID       string `xml:"id,attr"`
-			Datatype string `xml:"datatype,attr"`
-			Value    string `xml:"value"`
-		} `xml:"variable"`
-		ConstantVariable struct {
-			Text     string `xml:",chardata"`
-			ID       string `xml:"id,attr"`
-			Datatype string `xml:"datatype,attr"`
-			Value    string `xml:"value"`
-		} `xml:"constant_variable"`
+		//Text     string `xml:",chardata"`
+		ConstantVariable []struct {
+			Text        string   `xml:",chardata"`
+			ID          string   `xml:"id,attr"`
+			Datatype    string   `xml:"datatype,attr"`
+			Description string   `xml:"description,omitempty"`
+			Value       string   `xml:"value"`
+			Notes       []string `xml:"notes,omitempty"`
+		} `xml:"constant_variable,omitempty"`
+		ExternalVariable []struct {
+			ID          string   `xml:"id,attr"`
+			Datatype    string   `xml:"datatype,attr"`
+			Description string   `xml:"description,omitempty"`
+			Value       string   `xml:"value"`
+			Notes       []string `xml:"notes,omitempty"`
+		} `xml:"external_variable,omitempty"`
+		LocalVariable []struct {
+			Text        string   `xml:",chardata"`
+			ID          string   `xml:"id,attr"`
+			Datatype    string   `xml:"datatype,attr"`
+			Description string   `xml:"description,omitempty"`
+			QuestionRef string   `xml:"question_ref"`
+			Set         []string `xml:"set,omitempty"`
+			Notes       []string `xml:"notes,omitempty"`
+		} `xml:"local_variable,omitempty"`
 	} `xml:"variables,omitempty"`
 	Results struct {
 		Text              string `xml:",chardata"`
-		StartTime         string `xml:"start_time,attr"`
-		EndTime           string `xml:"end_time,attr"`
-		Title             string `xml:"title"`
+		StartTime         string `xml:"start_time,attr,omitempty"`
+		EndTime           string `xml:"end_time,attr,omitempty"`
+		Title             string `xml:"title,omitempty"`
 		TestActionResults struct {
 			Text             string `xml:",chardata"`
 			TestActionResult struct {
