@@ -50,13 +50,13 @@ type Ocil struct {
 
 	Questionnaires struct {
 		// Text          string `xml:",chardata"`
-		Questionnaire struct {
+		Questionnaire []struct {
 			Text        string `xml:",chardata"`
 			ID          string `xml:"id,attr"`
 			ChildOnly   string `xml:"child_only,attr,omitempty"`
 			Title       string `xml:"title,omitempty"`
 			Description string `xml:"description,omitempty"`
-			References  string `xml:"references,omitempty"`
+			References  []string `xml:"references,omitempty"`
 			Actions     struct {
 				//Text          string `xml:",chardata"`
 				TestActionRef []string `xml:"test_action_ref"`
