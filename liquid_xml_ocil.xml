@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<ocil xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns="http://www.w3.org/1999/xhtml" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:inter="http://scap.nist.gov/schema/ocil/2.0" xsi:schemaLocation="http://scap.nist.gov/schema/ocil/2.0 schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <generator>
+    <schema_version>-3699989.7650942</schema_version>
+    <timestamp>1971-03-24T01:53:56.65</timestamp>
+    <additional_data />
+  </generator>
+  <document>
+    <title>string</title>
+    <notice>string</notice>
+    <notice>string</notice>
+    <notice>string</notice>
+    <notice>string</notice>
+  </document>
+  <questionnaires>
+    <questionnaire id="ocil:_._-:questionnaire:2939">
+      <actions>
+        <test_action_ref>ocil:U:testaction:1</test_action_ref>
+      </actions>
+    </questionnaire>
+  </questionnaires>
+  <test_actions>
+    <choice_question_test_action question_ref="ocil:.:question:3557" id="ocil:.IN1Jf-si_-_:testaction:9">
+      <when_choice>
+        <result>NOT_APPLICABLE</result>
+        <choice_ref>ocil:e9_46aI_.1_X:choice:3</choice_ref>
+      </when_choice>
+    </choice_question_test_action>
+  </test_actions>
+  <questions>
+    <choice_question id="ocil:v:question:1">
+      <question_text />
+      <choice id="ocil:On9E.:choice:7">string</choice>
+      <choice_group_ref>ocil:-4vK__rrVMz_8T_31_z:choicegroup:36</choice_group_ref>
+      <choice_group_ref>ocil:BY:choicegroup:77692</choice_group_ref>
+    </choice_question>
+    <choice_question id="ocil:M.:question:173">
+      <question_text />
+      <choice id="ocil:F:choice:6">string</choice>
+      <choice_group_ref>ocil:N_mZa_--j3l:choicegroup:5</choice_group_ref>
+      <choice_group_ref>ocil:-_1_P6..._Co28..R_LE:choicegroup:4</choice_group_ref>
+      <choice_group_ref>ocil:g_.dTM2-T1-juWZ:choicegroup:33</choice_group_ref>
+      <choice_group_ref>ocil:-ru_13-3DL.:choicegroup:838</choice_group_ref>
+    </choice_question>
+  </questions>
+  <artifacts>
+    <artifact id="ocil:3YP:artifact:72">
+      <title>string</title>
+      <description>string</description>
+    </artifact>
+    <artifact id="ocil:29__N-_1P_:artifact:89">
+      <title>string</title>
+      <description>string</description>
+    </artifact>
+    <artifact id="ocil:-_41__:artifact:11">
+      <title>string</title>
+      <description>string</description>
+    </artifact>
+  </artifacts>
+  <variables>
+    <variable xsi:type="ConstantVariableType" id="ocil:a:variable:367266" datatype="TEXT">
+      <value>string</value>
+    </variable>
+    <constant_variable id="ocil:___g-V0R:variable:2" datatype="TEXT">
+      <value>string</value>
+    </constant_variable>
+    <variable xsi:type="ConstantVariableType" id="ocil:_AQ-d:variable:52" datatype="NUMERIC">
+      <value>string</value>
+    </variable>
+  </variables>
+  <results start_time="2009-04-10T01:20:55.35" end_time="1982-11-07T17:27:47.77">
+    <title>string</title>
+    <test_action_results>
+      <test_action_result test_action_ref="ocil:.:testaction:9" result="NOT_APPLICABLE" />
+    </test_action_results>
+    <question_results>
+      <boolean_question_result question_ref="ocil:-_E6v.6-v:question:82">
+        <answer>true</answer>
+      </boolean_question_result>
+    </question_results>
+    <targets>
+      <target xsi:type="UserType">
+        <name>string</name>
+      </target>
+    </targets>
+  </results>
+</ocil>
+
+

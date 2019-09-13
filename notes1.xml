@@ -1,0 +1,45 @@
+<ocil xml="" xmlns="" sch="" schemaLocation="" xsi="">
+ <generator>
+  <schema_version></schema_version>
+  <timestamp></timestamp>
+ </generator>
+ <document>
+  <title></title>
+ </document>
+ <questionnaires>
+  <questionnaire id="">
+   <actions></actions>
+  </questionnaire>
+ </questionnaires>
+ <test_actions>
+  <choice_question_test_action question_ref="" id="">
+   <when_choice>
+    <result></result>
+    <choice_ref></choice_ref>
+   </when_choice>
+  </choice_question_test_action>
+ </test_actions>
+ <questions></questions>
+ <artifacts></artifacts>
+ <variables>
+  <constant_variable id="" datatype="">
+   <value></value>
+  </constant_variable>
+ </variables>
+ <results start_time="" end_time="">
+  <title></title>
+  <test_action_results>
+   <test_action_result test_action_ref="" result=""></test_action_result>
+  </test_action_results>
+  <question_results>
+   <boolean_question_result question_ref="">
+    <answer></answer>
+   </boolean_question_result>
+  </question_results>
+  <targets>
+   <target type="">
+    <name></name>
+   </target>
+  </targets>
+ </results>
+</ocil>
